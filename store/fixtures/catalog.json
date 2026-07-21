@@ -1,5 +1,135 @@
 [
   {
+    "model": "store.tag",
+    "pk": 1,
+    "fields": {
+      "name": "Beef",
+      "slug": "beef",
+      "group": "Protein",
+      "order": 1
+    }
+  },
+  {
+    "model": "store.tag",
+    "pk": 2,
+    "fields": {
+      "name": "Chicken",
+      "slug": "chicken",
+      "group": "Protein",
+      "order": 2
+    }
+  },
+  {
+    "model": "store.tag",
+    "pk": 3,
+    "fields": {
+      "name": "Pork",
+      "slug": "pork",
+      "group": "Protein",
+      "order": 3
+    }
+  },
+  {
+    "model": "store.tag",
+    "pk": 4,
+    "fields": {
+      "name": "Lamb",
+      "slug": "lamb",
+      "group": "Protein",
+      "order": 4
+    }
+  },
+  {
+    "model": "store.tag",
+    "pk": 5,
+    "fields": {
+      "name": "Duck",
+      "slug": "duck",
+      "group": "Protein",
+      "order": 5
+    }
+  },
+  {
+    "model": "store.tag",
+    "pk": 6,
+    "fields": {
+      "name": "Game",
+      "slug": "game",
+      "group": "Protein",
+      "order": 6
+    }
+  },
+  {
+    "model": "store.tag",
+    "pk": 7,
+    "fields": {
+      "name": "Fish",
+      "slug": "fish",
+      "group": "Protein",
+      "order": 7
+    }
+  },
+  {
+    "model": "store.tag",
+    "pk": 8,
+    "fields": {
+      "name": "Shellfish",
+      "slug": "shellfish",
+      "group": "Protein",
+      "order": 8
+    }
+  },
+  {
+    "model": "store.tag",
+    "pk": 9,
+    "fields": {
+      "name": "Cured & Smoked",
+      "slug": "cured-smoked",
+      "group": "Style",
+      "order": 1
+    }
+  },
+  {
+    "model": "store.tag",
+    "pk": 10,
+    "fields": {
+      "name": "Cheese & Dairy",
+      "slug": "cheese-dairy",
+      "group": "Style",
+      "order": 2
+    }
+  },
+  {
+    "model": "store.tag",
+    "pk": 11,
+    "fields": {
+      "name": "Truffle",
+      "slug": "truffle",
+      "group": "Style",
+      "order": 3
+    }
+  },
+  {
+    "model": "store.tag",
+    "pk": 12,
+    "fields": {
+      "name": "Pantry Staple",
+      "slug": "pantry-staple",
+      "group": "Style",
+      "order": 4
+    }
+  },
+  {
+    "model": "store.tag",
+    "pk": 13,
+    "fields": {
+      "name": "Fresh Produce",
+      "slug": "fresh-produce",
+      "group": "Style",
+      "order": 5
+    }
+  },
+  {
     "model": "store.category",
     "pk": 1,
     "fields": {
@@ -22,7 +152,10 @@
       "image": "",
       "is_popular": true,
       "is_active": true,
-      "created_at": "2026-07-20T00:00:00+10:00"
+      "created_at": "2026-07-20T00:00:00+10:00",
+      "tags": [
+        7
+      ]
     }
   },
   {
@@ -39,7 +172,10 @@
       "image": "",
       "is_popular": false,
       "is_active": true,
-      "created_at": "2026-07-20T00:00:00+10:00"
+      "created_at": "2026-07-20T00:00:00+10:00",
+      "tags": [
+        8
+      ]
     }
   },
   {
@@ -56,7 +192,10 @@
       "image": "",
       "is_popular": false,
       "is_active": true,
-      "created_at": "2026-07-20T00:00:00+10:00"
+      "created_at": "2026-07-20T00:00:00+10:00",
+      "tags": [
+        8
+      ]
     }
   },
   {
@@ -73,7 +212,10 @@
       "image": "",
       "is_popular": false,
       "is_active": true,
-      "created_at": "2026-07-20T00:00:00+10:00"
+      "created_at": "2026-07-20T00:00:00+10:00",
+      "tags": [
+        7
+      ]
     }
   },
   {
@@ -90,7 +232,10 @@
       "image": "",
       "is_popular": false,
       "is_active": true,
-      "created_at": "2026-07-20T00:00:00+10:00"
+      "created_at": "2026-07-20T00:00:00+10:00",
+      "tags": [
+        8
+      ]
     }
   },
   {
@@ -103,11 +248,14 @@
       "size_label": "1kg",
       "unit": "weight",
       "price": "48.00",
-      "description": "Wild-caught, not farmed — superior flavour.",
+      "description": "Wild-caught, not farmed \u2014 superior flavour.",
       "image": "",
       "is_popular": false,
       "is_active": true,
-      "created_at": "2026-07-20T00:00:00+10:00"
+      "created_at": "2026-07-20T00:00:00+10:00",
+      "tags": [
+        8
+      ]
     }
   },
   {
@@ -124,7 +272,10 @@
       "image": "",
       "is_popular": false,
       "is_active": true,
-      "created_at": "2026-07-20T00:00:00+10:00"
+      "created_at": "2026-07-20T00:00:00+10:00",
+      "tags": [
+        7
+      ]
     }
   },
   {
@@ -141,7 +292,10 @@
       "image": "",
       "is_popular": false,
       "is_active": true,
-      "created_at": "2026-07-20T00:00:00+10:00"
+      "created_at": "2026-07-20T00:00:00+10:00",
+      "tags": [
+        8
+      ]
     }
   },
   {
@@ -167,7 +321,10 @@
       "image": "",
       "is_popular": true,
       "is_active": true,
-      "created_at": "2026-07-20T00:00:00+10:00"
+      "created_at": "2026-07-20T00:00:00+10:00",
+      "tags": [
+        1
+      ]
     }
   },
   {
@@ -184,7 +341,10 @@
       "image": "",
       "is_popular": true,
       "is_active": true,
-      "created_at": "2026-07-20T00:00:00+10:00"
+      "created_at": "2026-07-20T00:00:00+10:00",
+      "tags": [
+        1
+      ]
     }
   },
   {
@@ -201,7 +361,10 @@
       "image": "",
       "is_popular": false,
       "is_active": true,
-      "created_at": "2026-07-20T00:00:00+10:00"
+      "created_at": "2026-07-20T00:00:00+10:00",
+      "tags": [
+        3
+      ]
     }
   },
   {
@@ -218,7 +381,10 @@
       "image": "",
       "is_popular": false,
       "is_active": true,
-      "created_at": "2026-07-20T00:00:00+10:00"
+      "created_at": "2026-07-20T00:00:00+10:00",
+      "tags": [
+        5
+      ]
     }
   },
   {
@@ -235,7 +401,10 @@
       "image": "",
       "is_popular": false,
       "is_active": true,
-      "created_at": "2026-07-20T00:00:00+10:00"
+      "created_at": "2026-07-20T00:00:00+10:00",
+      "tags": [
+        6
+      ]
     }
   },
   {
@@ -252,7 +421,10 @@
       "image": "",
       "is_popular": false,
       "is_active": true,
-      "created_at": "2026-07-20T00:00:00+10:00"
+      "created_at": "2026-07-20T00:00:00+10:00",
+      "tags": [
+        6
+      ]
     }
   },
   {
@@ -269,7 +441,50 @@
       "image": "",
       "is_popular": false,
       "is_active": true,
-      "created_at": "2026-07-20T00:00:00+10:00"
+      "created_at": "2026-07-20T00:00:00+10:00",
+      "tags": [
+        4
+      ]
+    }
+  },
+  {
+    "model": "store.product",
+    "pk": 43,
+    "fields": {
+      "category": 2,
+      "name": "Free-Range Chicken Breast 500g",
+      "slug": "free-range-chicken-breast-500g",
+      "size_label": "500g",
+      "unit": "weight",
+      "price": "18.00",
+      "description": "Pasture-raised, hormone-free, RSPCA approved.",
+      "image": "",
+      "is_popular": false,
+      "is_active": true,
+      "created_at": "2026-07-20T00:00:00+10:00",
+      "tags": [
+        2
+      ]
+    }
+  },
+  {
+    "model": "store.product",
+    "pk": 44,
+    "fields": {
+      "category": 2,
+      "name": "Whole Free-Range Chicken 1.8kg",
+      "slug": "whole-free-range-chicken-18kg",
+      "size_label": "1.8kg",
+      "unit": "piece",
+      "price": "26.00",
+      "description": "Slow-grown heritage breed, oven-ready.",
+      "image": "",
+      "is_popular": false,
+      "is_active": true,
+      "created_at": "2026-07-20T00:00:00+10:00",
+      "tags": [
+        2
+      ]
     }
   },
   {
@@ -295,7 +510,11 @@
       "image": "",
       "is_popular": false,
       "is_active": true,
-      "created_at": "2026-07-20T00:00:00+10:00"
+      "created_at": "2026-07-20T00:00:00+10:00",
+      "tags": [
+        10,
+        11
+      ]
     }
   },
   {
@@ -312,7 +531,10 @@
       "image": "",
       "is_popular": false,
       "is_active": true,
-      "created_at": "2026-07-20T00:00:00+10:00"
+      "created_at": "2026-07-20T00:00:00+10:00",
+      "tags": [
+        10
+      ]
     }
   },
   {
@@ -325,11 +547,14 @@
       "size_label": "250g",
       "unit": "weight",
       "price": "18.00",
-      "description": "Italian-style, made fresh — short shelf life.",
+      "description": "Italian-style, made fresh \u2014 short shelf life.",
       "image": "",
       "is_popular": false,
       "is_active": true,
-      "created_at": "2026-07-20T00:00:00+10:00"
+      "created_at": "2026-07-20T00:00:00+10:00",
+      "tags": [
+        10
+      ]
     }
   },
   {
@@ -346,7 +571,10 @@
       "image": "",
       "is_popular": false,
       "is_active": true,
-      "created_at": "2026-07-20T00:00:00+10:00"
+      "created_at": "2026-07-20T00:00:00+10:00",
+      "tags": [
+        10
+      ]
     }
   },
   {
@@ -363,7 +591,10 @@
       "image": "",
       "is_popular": false,
       "is_active": true,
-      "created_at": "2026-07-20T00:00:00+10:00"
+      "created_at": "2026-07-20T00:00:00+10:00",
+      "tags": [
+        10
+      ]
     }
   },
   {
@@ -389,7 +620,11 @@
       "image": "",
       "is_popular": false,
       "is_active": true,
-      "created_at": "2026-07-20T00:00:00+10:00"
+      "created_at": "2026-07-20T00:00:00+10:00",
+      "tags": [
+        11,
+        12
+      ]
     }
   },
   {
@@ -406,7 +641,10 @@
       "image": "",
       "is_popular": false,
       "is_active": true,
-      "created_at": "2026-07-20T00:00:00+10:00"
+      "created_at": "2026-07-20T00:00:00+10:00",
+      "tags": [
+        12
+      ]
     }
   },
   {
@@ -423,7 +661,10 @@
       "image": "",
       "is_popular": false,
       "is_active": true,
-      "created_at": "2026-07-20T00:00:00+10:00"
+      "created_at": "2026-07-20T00:00:00+10:00",
+      "tags": [
+        12
+      ]
     }
   },
   {
@@ -440,7 +681,10 @@
       "image": "",
       "is_popular": false,
       "is_active": true,
-      "created_at": "2026-07-20T00:00:00+10:00"
+      "created_at": "2026-07-20T00:00:00+10:00",
+      "tags": [
+        12
+      ]
     }
   },
   {
@@ -457,7 +701,10 @@
       "image": "",
       "is_popular": false,
       "is_active": true,
-      "created_at": "2026-07-20T00:00:00+10:00"
+      "created_at": "2026-07-20T00:00:00+10:00",
+      "tags": [
+        12
+      ]
     }
   },
   {
@@ -474,7 +721,10 @@
       "image": "",
       "is_popular": false,
       "is_active": true,
-      "created_at": "2026-07-20T00:00:00+10:00"
+      "created_at": "2026-07-20T00:00:00+10:00",
+      "tags": [
+        12
+      ]
     }
   },
   {
@@ -491,7 +741,10 @@
       "image": "",
       "is_popular": false,
       "is_active": true,
-      "created_at": "2026-07-20T00:00:00+10:00"
+      "created_at": "2026-07-20T00:00:00+10:00",
+      "tags": [
+        12
+      ]
     }
   },
   {
@@ -517,7 +770,11 @@
       "image": "",
       "is_popular": false,
       "is_active": true,
-      "created_at": "2026-07-20T00:00:00+10:00"
+      "created_at": "2026-07-20T00:00:00+10:00",
+      "tags": [
+        11,
+        13
+      ]
     }
   },
   {
@@ -534,7 +791,10 @@
       "image": "",
       "is_popular": false,
       "is_active": true,
-      "created_at": "2026-07-20T00:00:00+10:00"
+      "created_at": "2026-07-20T00:00:00+10:00",
+      "tags": [
+        13
+      ]
     }
   },
   {
@@ -551,7 +811,10 @@
       "image": "",
       "is_popular": false,
       "is_active": true,
-      "created_at": "2026-07-20T00:00:00+10:00"
+      "created_at": "2026-07-20T00:00:00+10:00",
+      "tags": [
+        13
+      ]
     }
   },
   {
@@ -568,7 +831,10 @@
       "image": "",
       "is_popular": false,
       "is_active": true,
-      "created_at": "2026-07-20T00:00:00+10:00"
+      "created_at": "2026-07-20T00:00:00+10:00",
+      "tags": [
+        13
+      ]
     }
   },
   {
@@ -585,7 +851,10 @@
       "image": "",
       "is_popular": false,
       "is_active": true,
-      "created_at": "2026-07-20T00:00:00+10:00"
+      "created_at": "2026-07-20T00:00:00+10:00",
+      "tags": [
+        13
+      ]
     }
   },
   {
@@ -602,7 +871,10 @@
       "image": "",
       "is_popular": false,
       "is_active": true,
-      "created_at": "2026-07-20T00:00:00+10:00"
+      "created_at": "2026-07-20T00:00:00+10:00",
+      "tags": [
+        13
+      ]
     }
   },
   {
@@ -628,7 +900,10 @@
       "image": "",
       "is_popular": false,
       "is_active": true,
-      "created_at": "2026-07-20T00:00:00+10:00"
+      "created_at": "2026-07-20T00:00:00+10:00",
+      "tags": [
+        9
+      ]
     }
   },
   {
@@ -645,7 +920,10 @@
       "image": "",
       "is_popular": false,
       "is_active": true,
-      "created_at": "2026-07-20T00:00:00+10:00"
+      "created_at": "2026-07-20T00:00:00+10:00",
+      "tags": [
+        9
+      ]
     }
   },
   {
@@ -662,7 +940,11 @@
       "image": "",
       "is_popular": false,
       "is_active": true,
-      "created_at": "2026-07-20T00:00:00+10:00"
+      "created_at": "2026-07-20T00:00:00+10:00",
+      "tags": [
+        9,
+        7
+      ]
     }
   },
   {
@@ -679,7 +961,11 @@
       "image": "",
       "is_popular": false,
       "is_active": true,
-      "created_at": "2026-07-20T00:00:00+10:00"
+      "created_at": "2026-07-20T00:00:00+10:00",
+      "tags": [
+        9,
+        5
+      ]
     }
   },
   {
@@ -696,7 +982,11 @@
       "image": "",
       "is_popular": false,
       "is_active": true,
-      "created_at": "2026-07-20T00:00:00+10:00"
+      "created_at": "2026-07-20T00:00:00+10:00",
+      "tags": [
+        9,
+        7
+      ]
     }
   },
   {
@@ -722,7 +1012,11 @@
       "image": "",
       "is_popular": false,
       "is_active": true,
-      "created_at": "2026-07-20T00:00:00+10:00"
+      "created_at": "2026-07-20T00:00:00+10:00",
+      "tags": [
+        1,
+        12
+      ]
     }
   },
   {
@@ -739,7 +1033,10 @@
       "image": "",
       "is_popular": false,
       "is_active": true,
-      "created_at": "2026-07-20T00:00:00+10:00"
+      "created_at": "2026-07-20T00:00:00+10:00",
+      "tags": [
+        12
+      ]
     }
   },
   {
@@ -756,7 +1053,10 @@
       "image": "",
       "is_popular": false,
       "is_active": true,
-      "created_at": "2026-07-20T00:00:00+10:00"
+      "created_at": "2026-07-20T00:00:00+10:00",
+      "tags": [
+        10
+      ]
     }
   },
   {
@@ -773,7 +1073,10 @@
       "image": "",
       "is_popular": false,
       "is_active": true,
-      "created_at": "2026-07-20T00:00:00+10:00"
+      "created_at": "2026-07-20T00:00:00+10:00",
+      "tags": [
+        12
+      ]
     }
   }
 ]

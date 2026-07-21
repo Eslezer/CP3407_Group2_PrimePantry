@@ -2,8 +2,8 @@
 {% block title %}{{ page_title }} — PrimePantry{% endblock %}
 {% block shell %}
 <section style="min-height:52vh;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:23px;text-align:center;padding:0 34px;">
-  <div style="font-size:18px;letter-spacing:1.5px;text-transform:uppercase;color:#212123;">{{ page_title }}</div>
-  <div style="font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:#a6a6a7;">Coming in a later iteration</div>
-  <a href="{% url 'store:catalog' %}" style="font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:#a6a6a7;">← Back to catalog</a>
+  <div style="font-family:'Fraunces',serif;font-weight:700;font-size:22px;letter-spacing:0.5px;text-transform:uppercase;color:var(--primary);">{{ page_title }}</div>
+  <div style="font-size:11px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);">Coming in a later iteration</div>
+  <a href="{% url 'store:catalog' %}" style="font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--primary);">← Back to catalog</a>
 </section>
 {% endblock %}
