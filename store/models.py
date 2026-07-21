@@ -20,6 +20,25 @@ class Category(models.Model):
         return f"{reverse('store:catalog')}?cat={self.slug}"
 
 
+class Tag(models.Model):
+    """A cross-category filter, e.g. Beef / Chicken / Fish, grouped for display."""
+
+    name = models.CharField(max_length=60, unique=True)
+    slug = models.SlugField(max_length=70, unique=True)
+    group = models.CharField(
+        max_length=40,
+        blank=True,
+        help_text="Filter section this tag appears under, e.g. 'Protein' or 'Style'.",
+    )
+    order = models.PositiveIntegerField(default=0)
+
+    class Meta:
+        ordering = ["group", "order", "name"]
+
+    def __str__(self):
+        return self.name
+
+
 class Product(models.Model):
     WEIGHT = "weight"
     PIECE = "piece"
@@ -28,6 +47,7 @@ class Product(models.Model):
     category = models.ForeignKey(
         Category, on_delete=models.CASCADE, related_name="products"
     )
+    tags = models.ManyToManyField(Tag, blank=True, related_name="products")
     name = models.CharField(max_length=160)
     slug = models.SlugField(max_length=170, unique=True)
     size_label = models.CharField(max_length=40, blank=True)

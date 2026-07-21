@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.templatetags.static import static
 from django.utils import timezone
 
-from .models import Category, Product
+from .models import Category, Product, Tag
 from .utils import cutoff_label, countdown_text, next_cutoff
 
 FEATURED_COLLECTIONS = [
@@ -36,14 +36,28 @@ def home(request):
 def catalog(request):
     q = request.GET.get("q", "").strip()
     active_cat = request.GET.get("cat", "").strip()
+    active_tag = request.GET.get("tag", "").strip()
 
     categories = list(Category.objects.all())
-    products = Product.objects.filter(is_active=True).select_related("category")
+    base_qs = Product.objects.filter(is_active=True).select_related("category")
     if q:
-        products = products.filter(name__icontains=q)
+        base_qs = base_qs.filter(name__icontains=q)
     if active_cat:
-        products = products.filter(category__slug=active_cat)
-    products = list(products)
+        base_qs = base_qs.filter(category__slug=active_cat)
+
+    tag_groups = []
+    seen_groups = {}
+    for tag in Tag.objects.filter(products__in=base_qs).distinct():
+        group_name = tag.group or "Filter"
+        if group_name not in seen_groups:
+            seen_groups[group_name] = {"name": group_name, "tags": []}
+            tag_groups.append(seen_groups[group_name])
+        seen_groups[group_name]["tags"].append(tag)
+
+    products = base_qs
+    if active_tag:
+        products = products.filter(tags__slug=active_tag)
+    products = list(products.prefetch_related("tags").distinct())
 
     sections = []
     for category in categories:
@@ -62,7 +76,9 @@ def catalog(request):
     context = {
         "q": q,
         "active_cat": active_cat,
+        "active_tag": active_tag,
         "categories": categories,
+        "tag_groups": tag_groups,
         "sections": sections,
         "result_count": len(products),
         "active_nav": "catalog",
